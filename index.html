@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Nilai</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Aplikasi Nilai</h1>
+        <div class="form-input">
+            <label for="nim">NIM</label>
+            <input type="text" id="nim" required>
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" required>
+        </div>
+        <div class="form-nilai">
+            <div class="nilai-teori">
+                <h2>Nilai Teori</h2>
+                <table>
+                    <tr>
+                        <td><label for="presensi-teori">Presensi</label></td>
+                        <td><input type="text" id="presensi-teori" required pattern="^\d+%?$" title="Masukkan nilai dalam persen (%)"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="tugas-teori">Tugas</label></td>
+                        <td><input type="text" id="tugas-teori" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="uts-teori">UTS</label></td>
+                        <td><input type="text" id="uts-teori" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="uas-teori">UAS</label></td>
+                        <td><input type="text" id="uas-teori" required></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="nilai-praktek">
+                <h2>Nilai Praktek</h2>
+                <table>
+                    <tr>
+                        <td><label for="presensi-praktek">Presensi</label></td>
+                        <td><input type="text" id="presensi-praktek" required pattern="^\d+%?$" title="Masukkan nilai dalam persen (%)"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="tugas-praktek">Tugas</label></td>
+                        <td><input type="text" id="tugas-praktek" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="uts-praktek">UTS</label></td>
+                        <td><input type="text" id="uts-praktek" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="uas-praktek">UAS</label></td>
+                        <td><input type="text" id="uas-praktek" required></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="form-buttons">
+            <button id="simpan">Simpan</button>
+            <button id="batal">Batal</button>
+        </div>
+        <div class="rincian-nilai">
+            <h2>Rincian Nilai</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>NIM</th>
+                        <th>Nama</th>
+                        <th>Presensi</th>
+                        <th>Tugas</th>
+                        <th>UTS</th>
+                        <th>UAS</th>
+                        <th>Nilai Akhir</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+                <tbody id="nilai-body">
+                </tbody>
+            </table>
+        </div>
+        <button id="reset">Reset</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

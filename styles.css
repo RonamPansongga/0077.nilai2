@@ -1,0 +1,123 @@
+body{
+    font-family: Arial,sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: aqua;
+    margin: 0;
+}
+.container{
+    background-color: plum;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px black;
+    width: 90%;
+    max-width: 800px;
+}
+h1,h2{
+    text-align: center;
+}
+.form-input, .form-buttons, .rincian-nilai{
+    margin-bottom: 20px;
+}
+label{
+    display: block;
+    margin-bottom: 5px;
+}
+input{
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border:1px solid whitesmoke;
+    border-radius: 4px;
+}
+.form-nilai{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.nilai-teori,.nilai-praktek{
+    width: 100%;
+}
+.nilai-teori h2,.nilai-praktek h2{
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+.nilai-teori h2{
+    background-color: chartreuse;
+}
+.nilai-praktek h2{
+    background-color: burlywood;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+td{
+    padding: 8px;
+    background-color: darkgray;
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+th{
+    background-color: aquamarine;
+}
+.form-buttons{
+    text-align: center;
+}
+button{
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#simpan{
+    background-color: green;
+    color: white;
+}
+
+#batal{
+    background-color: brown;
+    color: white;
+}
+.rincian-nilai table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.rincian-nilai th, .rincian-nilai td{
+    border: 1px solid white;
+    padding: 8px;
+}
+.rincian-nilai th{
+    background-color: aquamarine;
+    text-align: center;
+}
+#reset{
+    background-color: bisque;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+@media (min-width: 600px) {
+    .form-nilai {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px; 
+    }
+
+    .nilai-teori, .nilai-praktek {
+        width: 48%; 
+    }
+}
